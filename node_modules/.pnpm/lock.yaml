@@ -1,9 +1,0 @@
-lockfileVersion: 5.4
-
-importers:
-
-  packages/hooks:
-    specifiers:
-      '@kevinPro/components': workspace:^1.0.0
-    dependencies:
-      '@kevinPro/components': link:../components
