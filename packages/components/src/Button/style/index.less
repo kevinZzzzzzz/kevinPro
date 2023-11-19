@@ -1,0 +1,162 @@
+
+@type: primary, success, info, warning, danger;
+@bgc: #409eff, #67c23a, #909399, #e6a23c, #f56c6c;
+@bgcHover: #66b1ff, #85ce61, #a6a9ad, #ebb563, #f78989;
+
+
+@bgcPlain: #ecf5ff, #f0f9eb, #f4f4f5, #fdf6ec, #fef0f0;
+@borderPlain: #b3d8ff, #c2e7b0, #d3d4d6, #f5dab1, #fbc4c4;
+@textPlain: #409eff, #67c23a, #909399, #e6a23c, #f56c6c;
+@bgcHoverPlain: #409eff, #67c23a, #909399, #e6a23c, #f56c6c;
+
+@iconType: search edit check message star-off delete;
+@icon: "\e778" "\e78c" "\e6da" "\e72b" "\e717" "\e6d7";
+
+.kv-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+  &:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+  each(@type, {
+    &--@{value} {
+      @bgcV: extract(@bgc, @index);
+      color: #fff;
+      background-color: @bgcV;
+      border-color: @bgcV;
+
+      &:hover {
+        @bgcHoverV: extract(@bgcHover, @index);
+        background: @bgcHoverV;
+        border-color: @bgcHoverV;
+        color: #fff;
+      }
+    }
+
+  });
+  &.is-plain:hover {
+    background: #fff;
+    border-color: #409eff;
+    color: #409eff;
+  }
+  each(@type, {
+    &--@{value}.is-plain {
+      @bgcV: extract(@bgcPlain, @index);
+      @borderV: extract(@borderPlain, @index);
+      @textV: extract(@textPlain, @index);
+      color: @textV;
+      background-color: @bgcV;
+      border-color: @borderV;
+  
+      &:hover {
+        @bgcHoverV: extract(@bgcHoverPlain, @index);
+        background: @bgcHoverV;
+        border-color: @bgcHoverV;
+        color: #fff;
+      }
+    }
+  });
+
+  &.is-round {
+    border-radius: 20px
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+  each(@iconType, {
+    .icon-@{value}{
+      font-family: element-icons!important;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      vertical-align: baseline;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      &:before {
+        @ctx: extract(@icon, @index);
+        content:  @ctx;
+      }
+    }
+  });
+  // &--primary {
+  //   color: #fff;
+  //   background-color: #409eff;
+  //   border-color: #409eff;
+
+  //   &:hover {
+  //     background: #66b1ff;
+  //     border-color: #66b1ff;
+  //     color: #fff;
+  //   }
+  // }
+  // &--success {
+  //   color: #fff;
+  //   background-color: #67c23a;
+  //   border-color: #67c23a;
+
+  //   &:hover {
+  //     background: #85ce61;
+  //     border-color: #85ce61;
+  //     color: #fff;
+  //   }
+  // }
+  // &--info {
+  //   color: #fff;
+  //   background-color: #909399;
+  //   border-color: #909399;
+
+  //   &:hover {
+  //     background: #a6a9ad;
+  //     border-color: #a6a9ad;
+  //     color: #fff;
+  //   }
+  // }
+  // &--warning {
+  //   color: #fff;
+  //   background-color: #e6a23c;
+  //   border-color: #e6a23c;
+
+  //   &:hover {
+  //     background: #ebb563;
+  //     border-color: #ebb563;
+  //     color: #fff;
+  //   }
+  // }
+  // &--danger {
+  //   color: #fff;
+  //   background-color: #f56c6c;
+  //   border-color: #f56c6c;
+  
+  //   &:hover {
+  //     background: #f78989;
+  //     border-color: #f78989;
+  //     color: #fff;
+  //   }
+  // }
+}

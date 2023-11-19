@@ -1,7 +1,6 @@
 <template>
   <DefaultLayout>
-    <router-view />
-    <kvButton />
+    <RouterView />
   </DefaultLayout>
 </template>
 
@@ -10,5 +9,4 @@ import { RouterView } from 'vue-router';
 import DefaultLayout from '@/layout/default.vue'
 </script>
 
-<style scoped lang="less">
-</style>
+<style scoped lang="less"></style>

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +12,12 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.9.0",
+    "@vitejs/plugin-vue": "^4.1.0",
     "@vue/runtime-core": "^3.3.8",
     "typescript": "^5.2.2",
+    "unplugin-vue-define-options": "^1.2.1",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^1.4.1",
     "vue": "^3.3.8"
   }
 }

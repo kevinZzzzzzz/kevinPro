@@ -12,7 +12,6 @@ declare module 'vue' {
     $api: any
   }
 }
-console.log(kevinPro)
 const store = createPinia().use(piniaPluginPersist)
 const app = createApp(App)
 app.config.globalProperties.$api = { ...api }

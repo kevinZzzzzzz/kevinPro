@@ -1,4 +1,4 @@
 packages:
-  - packages/** # 组件库、项目库
-  - example # 存放测试代码
-  - docs # 存放组件文档
+  - "packages/**" # 组件库、项目库
+  - "example" # 存放测试代码
+  - "docs" # 存放组件文档
