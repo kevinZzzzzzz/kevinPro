@@ -19,6 +19,7 @@ type ButtonProps = {
   round?: boolean,
   circle?: boolean,
   icon?: string,
+  disabled?: boolean,
 }
 // withDefaults设置props默认值
 const buttonProps = withDefaults(defineProps<ButtonProps>(), {
@@ -27,6 +28,7 @@ const buttonProps = withDefaults(defineProps<ButtonProps>(), {
   round: false,
   circle: false,
   icon: '',
+  disabled: false,
 })
 const buttonStyle = computed(() => {
   return {
@@ -34,6 +36,7 @@ const buttonStyle = computed(() => {
     ['is-plain']: buttonProps.plain,
     ['is-round']: buttonProps.round,
     ['is-circle']: buttonProps.circle,
+    ['is-disabled']: buttonProps.disabled,
   }
 })
 </script>
