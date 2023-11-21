@@ -72,6 +72,49 @@
       <kvButton type="danger" circle icon="icon-delete" />
     </div>
   </div>
+  <div class="btnMain">
+    <div class="item">
+      <kvButton disabled>
+        默认按钮
+      </kvButton>
+      <kvButton type="primary" disabled>
+        主要按钮
+      </kvButton>
+      <kvButton type="success" disabled>
+        成功按钮
+      </kvButton>
+      <kvButton type="info" disabled>
+        信息按钮
+      </kvButton>
+      <kvButton type="warning" disabled>
+        警告按钮
+      </kvButton>
+      <kvButton type="danger" disabled>
+        危险按钮
+      </kvButton>
+    </div>
+    
+    <div class="item">
+      <kvButton plain disabled>
+        朴素按钮
+      </kvButton>
+      <kvButton type="primary" plain disabled>
+        主要按钮
+      </kvButton>
+      <kvButton type="success" plain disabled>
+        成功按钮
+      </kvButton>
+      <kvButton type="info" plain disabled>
+        信息按钮
+      </kvButton>
+      <kvButton type="warning" plain disabled>
+        警告按钮
+      </kvButton>
+      <kvButton type="danger" plain disabled>
+        危险按钮
+      </kvButton>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
